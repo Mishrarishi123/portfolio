@@ -11,7 +11,7 @@ const Nav = () => {
   const menuItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
   return (
-    <header className="bg-[#19263B]/70 backdrop-blur-sm rounded-2xl max-w-4xl mx-auto text-white shadow-blue sticky top-0 z-50">
+    <header className="bg-[#19263B]/70 backdrop-blur-sm rounded-2xl max-w-2xl mx-auto text-white shadow-blue sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
