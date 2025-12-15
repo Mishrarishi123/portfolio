@@ -1241,7 +1241,7 @@ export default function LiquidEther({
   return (
     <div
       ref={mountRef}
-      className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-none touch-none ${className}`}
+      className={`absolute inset-0 w-full h-full overflow-hidden pointer-events-auto ${className}`}
       style={style}
     />
   );
