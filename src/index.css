@@ -33,4 +33,19 @@
       monospace;
   }
 
+
+  .background {
+    background-image: url(./assets/background/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+
+    @media (max-width: 640px),
+    (hover: none) {
+      .custom-cursor-wrapper {
+        display: none !important;
+      }
+    }
 }
