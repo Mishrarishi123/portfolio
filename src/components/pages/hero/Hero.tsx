@@ -48,9 +48,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen overflow-hidden">
       {/* NAV — always on top */}
-      <div className="absolute top-6 left-0 right-0 z-50">
-        <Nav />
-      </div>
+      <Nav />
 
       {/* Background */}
       <motion.div

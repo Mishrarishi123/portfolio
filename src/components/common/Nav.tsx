@@ -11,7 +11,7 @@ const Nav = () => {
   const menuItems = ["Home", "About", "Skills", "Projects", "Contact"];
 
   return (
-    <section className="px-6  sticky top-0 z-50">
+    <section className="px-6  fixed  top-6 mx-auto left-0 right-0 z-50">
       <header className="bg-white/10 border border-white/20 backdrop-blur-sm rounded-2xl max-w-2xl mx-auto text-white shadow-blue">
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
