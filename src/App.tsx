@@ -1,6 +1,7 @@
 import "./App.css";
 import About from "./components/pages/about/About";
 import Hero from "./components/pages/hero/Hero";
+import Projects from "./components/pages/projects/Projects";
 import Skills from "./components/pages/skills/Skills";
 import SplashCursor from "./components/ui/cursor/SplashCursor";
 
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <Projects />
       </main>
     </div>
   );
