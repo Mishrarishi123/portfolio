@@ -21,7 +21,7 @@ const About = () => {
       </div>
 
       {/* Cards */}
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl  grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:grid-cols-3">
         {features.map((item: any, i: number) => {
           const Icon = item.icon;
 
@@ -36,8 +36,8 @@ const About = () => {
         })}
       </div>
 
-      <div className="grid-cols-1 px-6">
-        <div className="mt-16 border border-white/20  bg-[#0F1118] backdrop-blur-2xl px-8 py-12 rounded-2xl max-w-5xl mx-auto">
+      <div className="grid-cols-1 px-6 max-w-6xl mx-auto mt-20">
+        <div className="mt-16 border border-white/20  bg-[#0F1118] backdrop-blur-2xl px-8 py-12 rounded-2xl">
           <p className="text-[#d3dce9] text-center sm:text-xl font-small">
             I'm a frontend developer specializing in building exceptional
             digital experiences. With expertise in React and modern web
