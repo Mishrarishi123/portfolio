@@ -1,44 +1,94 @@
 import FeatureCard from "../../ui/cards/FeatureCard";
-import { features } from "../../../constants/AboutData"; // <-- FIX 1
-// import LiquidEther from "../../ui/background/LiquidEther";
+import { features } from "../../../constants/AboutData";
+import { motion } from "framer-motion";
+
+// SECTION
+const sectionVariant = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
+};
+
+// STAGGER CONTAINER
+const staggerContainer = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+// ITEM
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" as const },
+  },
+};
 
 const About = () => {
   return (
-    <section className="py-20 relative overflow-hidden" id="about">
-      {/* <div className="absolute inset-0 -z-10">
-        <LiquidEther className="absolute inset-0 -z-10"/>
-      </div> */}
+    <motion.section
+      id="about"
+      className="py-20 relative overflow-hidden"
+      variants={sectionVariant}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-100px" }}
+    >
       {/* Heading */}
-      <div className="mb-16 flex flex-col items-center justify-center space-y-6 px-6 text-center">
-        <h1 className="text-5xl sm:text-7xl font-inter font-bold text-white">
+      <motion.div
+        className="mb-16 flex flex-col items-center justify-center space-y-6 px-6 text-center"
+        variants={staggerContainer}
+      >
+        <motion.h1
+          variants={fadeUp}
+          className="text-5xl sm:text-7xl font-inter font-bold text-white"
+        >
           About me
-        </h1>
+        </motion.h1>
 
-        <p className="max-w-3xl text-xl sm:text-3xl text-[#d3dce9]">
+        <motion.p
+          variants={fadeUp}
+          className="max-w-3xl text-xl sm:text-3xl text-[#d3dce9]"
+        >
           Passionate frontend developer with a love for creating immersive
           digital experiences
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
       {/* Cards */}
-      <div className="mx-auto grid max-w-6xl  grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:grid-cols-3">
-        {features.map((item: any, i: number) => {
-          const Icon = item.icon;
+      <motion.div
+        className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 sm:grid-cols-2 md:grid-cols-3"
+        variants={staggerContainer}
+      >
+        {features.map((itemData: any, i: number) => {
+          const Icon = itemData.icon;
 
           return (
-            <FeatureCard
-              key={i}
-              icon={<Icon size={24} />}
-              title={item.title}
-              description={item.description}
-            />
+            <motion.div key={i} variants={fadeUp}>
+              <FeatureCard
+                icon={<Icon size={24} />}
+                title={itemData.title}
+                description={itemData.description}
+              />
+            </motion.div>
           );
         })}
-      </div>
+      </motion.div>
 
-      <div className="grid-cols-1 px-6 max-w-6xl mx-auto mt-20">
-        <div className="mt-16 border border-white/20  bg-[#0F1118] backdrop-blur-2xl px-8 py-12 rounded-2xl">
-          <p className="text-[#d3dce9] text-center sm:text-xl font-small">
+      {/* Bottom Text Box */}
+      <motion.div
+        className="grid-cols-1 px-6 max-w-6xl mx-auto mt-20"
+        variants={fadeUp}
+      >
+        <div className="mt-16 border border-white/20 bg-[#0F1118] backdrop-blur-2xl px-8 py-12 rounded-2xl">
+          <p className="text-[#d3dce9] text-center sm:text-xl">
             I'm a frontend developer specializing in building exceptional
             digital experiences. With expertise in React and modern web
             technologies, I transform ideas into interactive, performant web
@@ -47,10 +97,8 @@ const About = () => {
             difference.
           </p>
         </div>
-      </div>
-
-      
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

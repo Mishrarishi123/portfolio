@@ -87,7 +87,10 @@ const Hero = () => {
         </motion.p>
 
         <motion.div variants={item} className="flex gap-6 mt-4">
-          <Button className="bg-[#05B6D1] text-black px-4 py-3 rounded-lg">
+          <Button
+            href="#projects"
+            className="bg-[#05B6D1] text-black px-4 py-3 rounded-lg"
+          >
             View Projects
           </Button>
 

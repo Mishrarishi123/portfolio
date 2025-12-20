@@ -16,6 +16,7 @@ const ProgressGrid = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
+      whileInView={{ opacity: 1, y: 0 }}
       className="grid grid-cols-1 px-6 md:grid-cols-2 gap-4 w-full max-w-6xl mx-auto"
     >
       {skills.map((skill, index) => (

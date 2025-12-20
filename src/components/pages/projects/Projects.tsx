@@ -2,7 +2,7 @@
 
 const Projects = () => {
   return (
-    <section>
+    <section id="projects">
       <div className="py-12 justify-center text-center flex flex-col items-center gap-4">
         <h1 className="text-5xl sm:text-7xl font-inter font-bold text-white">
           Featured Projects

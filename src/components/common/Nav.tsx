@@ -1,5 +1,5 @@
-import{ useState } from "react";
-import logo from "../../assets/logo/logo.png"
+import { useState } from "react";
+import logo from "../../assets/logo/logo.png";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,12 +16,14 @@ const Nav = () => {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="text-2xl flex items-center gap-2 font-bold">
-              <img src={logo} alt="" className="h-9" />
-              <div>
-                <span className="text-blue-400">Port</span>folio
+            <a href="#home">
+              <div className="text-2xl flex items-center gap-2 font-bold">
+                <img src={logo} alt="" className="h-9" />
+                <div>
+                  <span className="text-blue-400">Port</span>folio
+                </div>
               </div>
-            </div>
+            </a>
 
             {/* Hamburger Menu Button - All Screens */}
             <button
@@ -57,7 +59,7 @@ const Nav = () => {
               {menuItems.map((item) => (
                 <a
                   key={item}
-                  href={`${item.toLowerCase()}`}
+                  href={`#${item.toLowerCase()}`}
                   onClick={() => setIsOpen(false)}
                   className="hover:text-white/70 transition-colors md:mb-0 duration-300 py-2 px-4 hover:bg-slate-800 rounded-full"
                 >
@@ -76,5 +78,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-

@@ -42,10 +42,14 @@
 
   }
 
-    @media (max-width: 700px),
-    (hover: none) {
-      .custom-cursor-wrapper {
-        display: none !important;
-      }
+  @media (max-width: 700px),
+  (hover: none) {
+    .custom-cursor-wrapper {
+      display: none !important;
     }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
