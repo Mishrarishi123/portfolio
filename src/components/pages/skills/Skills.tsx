@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { easeOut } from "framer-motion";
 import ProgressGrid from "../../ui/progressbar/ProgressGrid";
 
 const sectionVariant = {
@@ -21,7 +22,7 @@ const fadeUp = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: easeOut },
   },
 };
 
